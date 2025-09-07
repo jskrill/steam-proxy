@@ -1,8 +1,8 @@
-name: Release: Build & Push Docker Image
+name: "Release: Build & Push Docker Image"
 
 on:
   release:
-    types: [published]  # runs only when a release is published
+    types: [published]
 
 env:
   REGISTRY: ghcr.io
@@ -10,7 +10,7 @@ env:
 
 permissions:
   contents: read
-  packages: write   # needed for GHCR with GITHUB_TOKEN
+  packages: write
 
 jobs:
   build-and-push:
